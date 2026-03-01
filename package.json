@@ -1,0 +1,34 @@
+{
+  "name": "imgtobase64-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for converting images to base64",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "imgtobase64-mcp-server": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "lint": "biome check src/",
+    "lint:fix": "biome check --write src/",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "express": "^4.21.2",
+    "file-type": "^19.6.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.10",
+    "typescript": "^5.7.3"
+  }
+}
